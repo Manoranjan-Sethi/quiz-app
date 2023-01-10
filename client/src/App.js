@@ -7,14 +7,11 @@ import Result from "./components/Result/Result";
 function App() {
   return (
     <Router>
-      <div className="App">
-        <h1>Hii</h1>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/result" element={<Result />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/result" element={<Result />} />
+      </Routes>
     </Router>
   );
 }

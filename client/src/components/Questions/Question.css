@@ -1,0 +1,33 @@
+.qimg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40vw;
+  margin-top: 10%;
+}
+.ques h1 {
+  color: #fff;
+}
+
+.ques {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aimg:hover {
+  opacity: 0.5;
+}
+
+.opt {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.opt img {
+  width: 150px;
+  cursor: pointer;
+}
