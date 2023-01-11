@@ -3,7 +3,7 @@ import "./Question.css";
 import { useFetchQuestion } from "../hooks/FetchQuestion";
 import { useSelector } from "react-redux";
 
-function Question() {
+function Question({ clickOn }) {
   const [click, setClick] = useState(undefined);
   const [{ isLoading, apiData, serverError }] = useFetchQuestion();
 
@@ -15,9 +15,9 @@ function Question() {
     // console.log(questions);
   });
 
-  //   function onSelect() {
-  //     setClick(true);
-  //   }
+  function onSelect(i) {
+    clickOn(i);
+  }
   return (
     <div className="ques" key={questions?.id}>
       <img className="qimg" src={questions?.questionImg} alt="QuestionImg" />
@@ -25,7 +25,12 @@ function Question() {
       <div className="opt">
         {questions?.options.map((ele, i) => (
           <div className="flex-img" key={i}>
-            <img className="aimg" src={ele} alt="" />
+            <img
+              className="aimg"
+              src={ele}
+              onClick={() => onSelect(i)}
+              alt=""
+            />
           </div>
         ))}
       </div>
